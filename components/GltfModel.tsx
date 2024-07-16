@@ -1,4 +1,3 @@
-// components/GltfModel.tsx
 "use client"
 
 import React, { useEffect, useState } from 'react';
@@ -20,13 +19,13 @@ interface GltfModelProps {
   scale?: [number, number, number];
 }
 
-const GltfModel: React.FC<GltfModelProps> = ({ path, scale = [1, 1,1] }) => {
-  const [isMobile, setIsMobile] = useState(false);
+const GltfModel: React.FC<GltfModelProps> = ({ path, scale = [1, 1, 1] }) => {
+  const [isLargeScreen, setIsLargeScreen] = useState(true);
 
   useEffect(() => {
     const checkWindowSize = () => {
       if (typeof window !== 'undefined') {
-        setIsMobile(window.innerWidth <= 768);
+        setIsLargeScreen(window.innerWidth > 1240);
       }
     };
 
@@ -41,24 +40,25 @@ const GltfModel: React.FC<GltfModelProps> = ({ path, scale = [1, 1,1] }) => {
     }
   }, []);
 
-  if (isMobile) {
+  if (!isLargeScreen) {
     return null; // Render nothing on small devices
   }
 
   return (
-    <Canvas 
-      className='mt-20 mx-40'
-      style={{ height: '600px', width: '500px' }}
-      camera={{ position: [80, 190, 225] }}
-      shadows={true}
-      gl={{ antialias: true }}
-      pixelRatio={typeof window !== 'undefined' ? Math.min(window.devicePixelRatio, 2) : 1} // Adjust pixel ratio for smooth rendering
-    >
-      <ambientLight intensity={1} />
-      <directionalLight position={[10, 10, 5]} intensity={1} />
-      <Model path={path} scale={scale} />
-      <OrbitControls />
-    </Canvas>
+    <div className="canvas-container">
+      <Canvas 
+        className='canvas'
+        style={{ height: '600px', width: '500px' }}
+        camera={{ position: [80, 190, 225] }}
+        shadows={true}
+        gl={{ antialias: true }}
+      >
+        <ambientLight intensity={1} />
+        <directionalLight position={[10, 10, 5]} intensity={1} />
+        <Model path={path} scale={scale} />
+        <OrbitControls />
+      </Canvas>
+    </div>
   );
 };
 
