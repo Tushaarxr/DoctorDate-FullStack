@@ -1,0 +1,11 @@
+Model Information:
+* title:	Doctor Pinch
+* source:	https://sketchfab.com/3d-models/doctor-pinch-ffa37cf597554e63a9fca01af3ae3104
+* author:	edouard77 (https://sketchfab.com/edouard77)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Doctor Pinch" (https://sketchfab.com/3d-models/doctor-pinch-ffa37cf597554e63a9fca01af3ae3104) by edouard77 (https://sketchfab.com/edouard77) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

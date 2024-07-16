@@ -12,11 +12,11 @@ const fontSans = Work_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "DoctorDate",
+  title: "Doctor Date",
   description:
     "A healthcare patient management System designed to streamline patient registration, appointment scheduling, and medical records management for healthcare providers.",
   icons: {
-    icon: "/assets/icons/logo-icon.svg",
+    icon: "",
   },
 };
 
@@ -29,7 +29,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-dark-300 font-sans antialiased",
+          "min-h-screen bg-dark font-sans antialiased",
           fontSans.variable
         )}
       >

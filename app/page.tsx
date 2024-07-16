@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { PatientForm } from "@/components/forms/PatientForm";
 import { PasskeyModal } from "@/components/PasskeyModal";
+import ThreeDModelPage from "./3dModel";
 
 const Home = ({ searchParams }: SearchParamProps) => {
   const isAdmin = searchParams?.admin === "true";
@@ -31,13 +32,17 @@ const Home = ({ searchParams }: SearchParamProps) => {
         </div>
       </section>
 
-      <Image
+      
+        <ThreeDModelPage/>
+      
+
+      {/* <Image
         src="/assets/images/onboarding-img.png"
         height={1000}
         width={1000}
         alt="patient"
         className="side-img max-w-[50%]"
-      />
+      /> */}
     </div>
   );
 };
