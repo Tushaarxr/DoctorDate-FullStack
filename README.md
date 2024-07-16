@@ -23,6 +23,7 @@ This project is a healthcare patient management application designed to streamli
 - **Appwrite**
 - **Typescript**
 - **TailwindCSS**
+- **Threejs**
 - **ShadCN**
 - **Twilio**
 
